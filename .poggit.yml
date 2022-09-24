@@ -2,6 +2,7 @@
 build-by-default: true
 branches:
 - master
+- arithmexp
 projects:
   Calculator:
     path: ""
