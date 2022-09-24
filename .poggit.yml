@@ -7,6 +7,6 @@ projects:
   Calculator:
     path: ""
     libs:
-      - src: muqsit/arithmexp
+      - src: muqsit/arithmexp/arithmexp
         version: 0.0.2
 ...
