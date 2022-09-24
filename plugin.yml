@@ -4,14 +4,18 @@ version: 0.0.1
 main: NhanAZ\Calculator\Main
 api: 4.0.0
 
+website: https://github.com/NhanAZ
+description: The plugin allows to execute math operations in the server or console.
+author: NhanAZ
+
 commands:
   calculator:
-    description: "Calculator"
-    usage: "/calculator <calculation>"
+    description: "Perform a math operation"
+    usage: "/calculator <expression>"
     permission: calculator.command
     aliases: ["calc"]
 permissions:
   calculator.command:
-    default: op
+    default: true
     description: "Allows the use of /calculator"
 ...

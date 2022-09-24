@@ -1,0 +1,15 @@
+---
+# Prefix of messages.
+prefix: "&f[&6Calculator&f]&r"
+
+# {prefix} : Prefix.
+# {result} : The result of the math.
+result: "{prefix} &aResult: &b{result}"
+
+# {prefix} : Prefix.
+# {error} : Error information.
+error: "{prefix} &cError: {error}"
+
+# playSound: true > A sound will be sent to the player when a math operation is performed.
+playSound: true
+...

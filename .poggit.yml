@@ -2,7 +2,11 @@
 build-by-default: true
 branches:
 - master
+- arithmexp
 projects:
   Calculator:
     path: ""
+    libs:
+      - src: muqsit/arithmexp
+        version: 0.0.2
 ...
