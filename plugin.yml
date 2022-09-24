@@ -1,0 +1,17 @@
+---
+name: Calculator
+version: 0.0.1
+main: NhanAZ\Calculator\Main
+api: 4.0.0
+
+commands:
+  calculator:
+    description: "Calculator"
+    usage: "/calculator <calculation>"
+    permission: calculator.command
+    aliases: ["calc"]
+permissions:
+  calculator.command:
+    default: op
+    description: "Allows the use of /calculator"
+...
