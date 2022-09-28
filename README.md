@@ -2,12 +2,19 @@
 **The plugin allows to execute math operations in the server or console with `/calculator` command**
 
 # Arithmetic Operators
-List of supported arithmetic operators: `/`, `*`, `+`, `-`.  
-Description of arithmetic operators: https://www.php.net/manual/en/math.constants.php
+- List of supported arithmetic operators: `/`, `*`, `+`, `-`, `**`, `%`.  
+- Description of arithmetic operators: https://www.php.net/manual/en/math.constants.php
+- Eg: `/calculator 1 + (2 - 3) * 4 / 5` > Result: `0.2`
 
 # Constants
-List of supported constants: `e`, `log2e`, `log10e`, `ln2`, `ln10`, `pi`, `euler`.  
-Description and values of functions: https://www.php.net/manual/en/math.constants.php
+- List of supported constants: `e`, `log2e`, `log10e`, `ln2`, `ln10`, `pi`, `euler`.  
+- Description of constants: https://www.php.net/manual/en/math.constants.php
+- Eg: `/calculator 3**2 * pi` > Result: `28.2`
+
+# Math functions
+- List of supported math functions: `abs`, `acos`, `acosh`, `asin`, `asinh`, `atan2`, `atan`, `atanh`, `ceil`, `cos`, `cosh`, `deg2rad`, `exp`, `expm1`, `fdiv`, `floor`, `fmod`, `getrandmax`, `hypot`, `intdiv`, `lcg_value`, `log10`, `log`, `max`, `min`, `mt_getrandmax`, `mt_rand`, `mt_srand`, `pi`, `pow`, `rad2deg`, `rand`, `round`, `sin`, `sinh`, `sqrt`, `srand`, `tan`, `tanh`.  
+- Description of math functions: https://www.php.net/manual/en/ref.math.php
+- Eg: `/calculator sqrt(369)` > Result: `19.2`
 
 # Commands & Permissions
 ```yaml
