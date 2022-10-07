@@ -5,7 +5,7 @@ main: NhanAZ\Calculator\Main
 api: 4.0.0
 
 website: https://github.com/NhanAZ
-description: The plugin allows to execute math operations in the server or console.
+description: Execute math expressions in the server or console on PocketMine-MP servers.
 author: NhanAZ
 
 commands:

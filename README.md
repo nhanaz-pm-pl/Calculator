@@ -1,5 +1,5 @@
 # General
-**The plugin allows to execute math operations in the server or console with `/calculator` command**
+**Execute math expressions in the server or console on PocketMine-MP servers with `/calculator` command**
 
 ![Eg Img](https://user-images.githubusercontent.com/60387689/194549412-e20377dd-43b5-4fe0-b386-52525757dc3e.png)
 
