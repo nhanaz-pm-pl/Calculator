@@ -1,6 +1,8 @@
 # General
 **The plugin allows to execute math operations in the server or console with `/calculator` command**
 
+![Eg Img](https://user-images.githubusercontent.com/60387689/194547869-cee9cce8-1fa0-41ab-9f86-fd7c012f7631.png)
+
 # Arithmetic Operators
 - List of supported arithmetic operators: `/`, `*`, `+`, `-`, `**`, `%`.  
 - Description of arithmetic operators: https://github.com/Muqsit/arithmexp/wiki/Operators
