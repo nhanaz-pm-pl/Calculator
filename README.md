@@ -46,7 +46,7 @@ result: "{prefix} &aResult: &b{result}"
 # {error} : Error information.
 error: "{prefix} &cError: {error}"
 
-# playSound: true > A sound will be sent to the player when a math operation is performed.
+# playSound: true > A sound will be sent to the player when a math expressions is performed.
 playSound: true
 ...
 
