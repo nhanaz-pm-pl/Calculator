@@ -9,7 +9,7 @@
 - Eg: `/calculator 1 + (2 - 3) * 4 / 5` > Result: `0.2`
 
 # Constants
-- List of supported constants: `e`, `log2e`, `log10e`, `ln2`, `ln10`, `pi`, `euler`.  
+- List of supported constants: `pi`, `e`, `log2e`, `log10e`, `ln2`, `ln10`, `pi2`, `pi4`, `m_1pi`, `m_2pi`, `sqrtpi`, `m_2sqrtpi`, `sqrt2`, `sqrt3`, `sqrt12`, `lnpi`, `euler`, `nan`, `inf`.  
 - Description of constants: https://github.com/Muqsit/arithmexp/wiki/List-of-pre-defined-constants
 - Eg: `/calculator 3**2 * pi` > Result: `28.2`
 
