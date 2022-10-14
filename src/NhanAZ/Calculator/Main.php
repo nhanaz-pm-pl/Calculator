@@ -30,16 +30,15 @@ class Main extends PluginBase {
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
 		if ($command->getName() === "calculator" && count($args) >= 1) {
 			$prefix = $this->getConfig()->get("prefix");
-			$result = $this->getConfig()->get("result");
-			$error = $this->getConfig()->get("error");
 			try {
 				$parser = Parser::createDefault();
 				$expression = $parser->parse(implode("", $args));
-				$result = str_replace(["{prefix}", "{result}"], [$prefix, $expression->evaluate()], $result);
+				$expressionEvaluate = $expression->evaluate();
+				$result = str_replace(["{prefix}", "{result}"], [$prefix, gettype($expressionEvaluate) . "({$expressionEvaluate})"], $this->getConfig()->get("result"));
 				$sender->sendMessage(TextFormat::colorize($result));
 				$this->playSound($sender, "mob.villager.yes");
 			} catch (\Throwable $e) {
-				$error = str_replace(["{prefix}", "{error}"], [$prefix, $e->getMessage()], $error);
+				$error = str_replace(["{prefix}", "{error}"], [$prefix, $e->getMessage()], $this->getConfig()->get("error"));
 				$sender->sendMessage(TextFormat::colorize($error));
 				$this->playSound($sender, "mob.villager.no");
 			}
