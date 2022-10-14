@@ -1,7 +1,7 @@
 # General
 **Execute math expressions in the server or console on PocketMine-MP servers with `/calculator` command**
 
-![Eg Img](https://user-images.githubusercontent.com/60387689/194549412-e20377dd-43b5-4fe0-b386-52525757dc3e.png)
+![EgImg](https://user-images.githubusercontent.com/60387689/195906906-17494770-75cc-480e-bd68-2a9d98fccda1.png)
 
 # Arithmetic Operators
 - List of supported arithmetic operators: `/`, `*`, `+`, `-`, `**`, `%`.  
