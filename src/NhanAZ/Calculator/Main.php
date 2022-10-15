@@ -33,8 +33,11 @@ class Main extends PluginBase {
 			try {
 				$parser = Parser::createDefault();
 				$expression = $parser->parse(implode("", $args));
-				$expressionEvaluate = $expression->evaluate();
-				$result = str_replace(["{prefix}", "{result}"], [$prefix, gettype($expressionEvaluate) . "({$expressionEvaluate})"], $this->getConfig()->get("result"));
+				$result = $expression->evaluate();
+				if ($this->getConfig()->get("showDataType")) {
+					$result = gettype($result) . "({$result})";
+				}
+				$result = str_replace(["{prefix}", "{result}"], [$prefix, $result], $this->getConfig()->get("result"));
 				$sender->sendMessage(TextFormat::colorize($result));
 				$this->playSound($sender, "mob.villager.yes");
 			} catch (\Throwable $e) {
