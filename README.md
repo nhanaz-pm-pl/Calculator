@@ -56,7 +56,7 @@ showDataType: true
 # advancedBrackets: true > Input will accept brackets: [ ] { }
 advancedBrackets: false
 
-configVersion: "0.0.12"
+configVersion: "0.0.13"
 ...
 
 ```
