@@ -9,5 +9,5 @@ projects:
       - src: muqsit/arithmexp/arithmexp
         version: 0.1.22
       - src: nhanaz-pm-pl/libBedrock/libBedrock
-        version: 0.0.1
+        version: 0.0.2
 ...
