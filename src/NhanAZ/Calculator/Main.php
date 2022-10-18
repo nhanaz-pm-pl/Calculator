@@ -7,8 +7,6 @@ namespace NhanAZ\Calculator;
 use muqsit\arithmexp\Parser;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use NhanAZ\libBedrock\libBedrock;
@@ -18,15 +16,6 @@ class Main extends PluginBase {
 	protected function onEnable(): void {
 		$this->saveDefaultConfig();
 		libBedrock::checkConfigVersion($this, $this->getConfig(), "configVersion", $this->getDescription()->getVersion());
-	}
-
-	private function playSound($player, string $soundName): void {
-		if ($this->getConfig()->get("playSound")) {
-			if ($player instanceof Player) {
-				$playerPos = $player->getPosition();
-				$player->getNetworkSession()->sendDataPacket(PlaySoundPacket::create($soundName, $playerPos->getX(), $playerPos->getY(), $playerPos->getZ(), 1, 1));
-			}
-		}
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
@@ -41,11 +30,11 @@ class Main extends PluginBase {
 				}
 				$result = str_replace(["{prefix}", "{result}"], [$prefix, $result], $this->getConfig()->get("result"));
 				$sender->sendMessage(TextFormat::colorize($result));
-				$this->playSound($sender, "mob.villager.yes");
+				libBedrock::playSound($sender, "mob.villager.yes", $this->getConfig()->get("playSound"));
 			} catch (\Throwable $e) {
 				$error = str_replace(["{prefix}", "{error}"], [$prefix, $e->getMessage()], $this->getConfig()->get("error"));
 				$sender->sendMessage(TextFormat::colorize($error));
-				$this->playSound($sender, "mob.villager.no");
+				libBedrock::playSound($sender, "mob.villager.no", $this->getConfig()->get("playSound"));
 			}
 			return true;
 		}
