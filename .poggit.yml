@@ -8,4 +8,6 @@ projects:
     libs:
       - src: muqsit/arithmexp/arithmexp
         version: 0.1.22
+      - src: NhanAZ/libBedrock/libBedrock
+        version: 0.0.1
 ...

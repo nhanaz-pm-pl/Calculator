@@ -11,11 +11,13 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
+use NhanAZ\libBedrock\libBedrock;
 
 class Main extends PluginBase {
 
 	protected function onEnable(): void {
 		$this->saveDefaultConfig();
+		libBedrock::checkConfigVersion($this, $this->getConfig(), "configVersion", $this->getDescription()->getVersion());
 	}
 
 	private function playSound($player, string $soundName): void {
