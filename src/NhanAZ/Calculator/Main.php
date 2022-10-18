@@ -23,7 +23,11 @@ class Main extends PluginBase {
 			$prefix = $this->getConfig()->get("prefix");
 			try {
 				$parser = Parser::createDefault();
-				$expression = $parser->parse(implode("", $args));
+				$expression = implode("", $args);
+				if ($this->getConfig()->get("advancedBrackets")) {
+					$expression = str_replace(["{", "[", "]", "}"], ["(", "(", ")", ")"], $expression);
+				}
+				$expression = $parser->parse($expression);
 				$result = $expression->evaluate();
 				if ($this->getConfig()->get("showDataType")) {
 					$result = gettype($result) . "({$result})";
