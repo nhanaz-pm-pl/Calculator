@@ -16,5 +16,6 @@ playSound: true
 # showDataType: true > The data type will be displayed with the result.
 showDataType: true
 
+# Config version
 configVersion: "0.0.14"
 ...

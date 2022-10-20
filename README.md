@@ -49,12 +49,13 @@ error: "{prefix} &cError: {error}"
 # playSound: true > A sound will be sent to the player when a math expressions is performed.
 playSound: true
 
-# Experimental feature (May not work as expected)
-# advancedBrackets: true > Input will accept brackets: [ ] { }
-advancedBrackets: false
+# showDataType: true > The data type will be displayed with the result.
+showDataType: true
 
+# Config version
 configVersion: "0.0.14"
 ...
+
 
 ```
 
