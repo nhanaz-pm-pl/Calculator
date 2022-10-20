@@ -24,9 +24,6 @@ class Main extends PluginBase {
 			try {
 				$parser = Parser::createDefault();
 				$expression = implode("", $args);
-				if ($this->getConfig()->get("advancedBrackets")) {
-					$expression = str_replace(["{", "[", "]", "}"], ["(", "(", ")", ")"], $expression);
-				}
 				$expression = $parser->parse($expression);
 				$result = $expression->evaluate();
 				if ($this->getConfig()->get("showDataType")) {
