@@ -13,9 +13,11 @@ use NhanAZ\libBedrock\libBedrock;
 
 class Main extends PluginBase {
 
+	public const CONFIG_VERSION = "0.0.15";
+
 	protected function onEnable(): void {
 		$this->saveDefaultConfig();
-		libBedrock::checkConfigVersion($this, $this->getConfig(), "configVersion", $this->getDescription()->getVersion());
+		libBedrock::checkConfigVersion($this, $this->getConfig(), "configVersion", self::CONFIG_VERSION);
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
