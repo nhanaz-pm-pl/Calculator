@@ -17,5 +17,5 @@ playSound: true
 showDataType: true
 
 # Config version
-configVersion: "0.0.14"
+configVersion: "0.0.15"
 ...
