@@ -23,7 +23,7 @@ class Main extends PluginBase {
 			$prefix = $this->getConfig()->get("prefix");
 			try {
 				$parser = Parser::createDefault();
-				$expression = implode("", $args);
+				$expression = implode(" ", $args);
 				$expression = $parser->parse($expression);
 				$result = $expression->evaluate();
 				if ($this->getConfig()->get("showDataType")) {
