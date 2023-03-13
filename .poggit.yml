@@ -7,7 +7,7 @@ projects:
     path: ""
     libs:
       - src: muqsit/arithmexp/arithmexp
-        version: dev-master
+        version: 0.1.29
       - src: nhanaz-pm-pl/libBedrock/libBedrock
         version: 0.0.2
 ...
