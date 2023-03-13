@@ -5,19 +5,16 @@ declare(strict_types=1);
 namespace NhanAZ\Calculator;
 
 use muqsit\arithmexp\Parser;
+use NhanAZ\libBedrock\Sounder;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
-use NhanAZ\libBedrock\libBedrock;
 
 class Main extends PluginBase {
 
-	public const CONFIG_VERSION = "0.0.15";
-
 	protected function onEnable(): void {
 		$this->saveDefaultConfig();
-		libBedrock::checkConfigVersion($this, $this->getConfig(), "configVersion", self::CONFIG_VERSION);
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
@@ -33,11 +30,11 @@ class Main extends PluginBase {
 				}
 				$result = str_replace(["{prefix}", "{result}"], [$prefix, $result], $this->getConfig()->get("result"));
 				$sender->sendMessage(TextFormat::colorize($result));
-				libBedrock::playSound($sender, "mob.villager.yes", $this->getConfig()->get("playSound"));
+				$this->getConfig()->get("playSound") ? Sounder::play($sender, "mob.villager.yes") : '';
 			} catch (\Throwable $e) {
 				$error = str_replace(["{prefix}", "{error}"], [$prefix, $e->getMessage()], $this->getConfig()->get("error"));
 				$sender->sendMessage(TextFormat::colorize($error));
-				libBedrock::playSound($sender, "mob.villager.no", $this->getConfig()->get("playSound"));
+				$this->getConfig()->get("playSound") ? Sounder::play($sender, "mob.villager.no") : '';
 			}
 			return true;
 		}
