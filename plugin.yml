@@ -1,6 +1,6 @@
 ---
 name: Calculator
-version: 0.0.19
+version: 0.0.20
 main: NhanAZ\Calculator\Main
 api: 5.0.0
 
