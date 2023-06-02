@@ -2,7 +2,7 @@
 name: Calculator
 version: 0.0.19
 main: NhanAZ\Calculator\Main
-api: 4.0.0
+api: 5.0.0
 
 website: https://github.com/NhanAZ
 description: Execute math expressions in the server or console on PocketMine-MP servers.
