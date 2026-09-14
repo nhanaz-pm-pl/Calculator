@@ -23,6 +23,13 @@
 - Description of operator: https://github.com/Muqsit/arithmexp/wiki/Operator
 - Eg: `/calculator 1 + 2 == 3` > Result: `true`
 
+# Variables
+- Pass values directly with `--variable=value`: `/calculator x + 1 --x=3` > Result: `4`.
+- Multiple variables are supported: `/calculator x * y + 1 --x=3 --y=4` > Result: `13`.
+- If a variable has no value in the command, the player is prompted in chat. Type `cancel` to cancel.
+- Variable values can also be expressions without spaces, such as `/calculator x + 1 --x=pi/4`.
+- Console commands must provide all variable values directly because the console cannot answer chat prompts.
+
 # Commands & Permissions
 ```yaml
 commands:

@@ -15,4 +15,16 @@ playSound: true
 
 # showDataType: true > The data type will be displayed with the result.
 showDataType: true
+
+# Number of seconds allowed to answer variable prompts.
+variableTimeoutSeconds: 60
+
+# Messages used when an expression contains variables.
+# {prefix} : Prefix.
+# {variable} : Variable name.
+# {error} : Error information.
+variablePrompt: "{prefix} &eEnter a value for variable &b{variable}&e. Type &bcancel&e to cancel."
+variableInvalid: "{prefix} &cInvalid value for &b{variable}&c: {error}"
+variableCancelled: "{prefix} &cCalculator session cancelled."
+variableTimedOut: "{prefix} &cCalculator session timed out."
 ...
